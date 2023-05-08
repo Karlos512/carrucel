@@ -1,0 +1,96 @@
+.container{
+    width: 90%;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider{
+    background-color: blanchedalmond;
+    padding: 40px 0;
+}
+
+.slider__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    align-items: center;
+    gap: 1em;
+}
+
+.slider__body{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+    display: grid;
+    background-color: chocolate;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    transition: opacity 1.5s;
+}
+
+.slider__body--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+/* Solo si se manejan imagenes
+.slider__img{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+} */
+
+.slider__text{
+    /* max-width: 600px; */
+    max-width: 100%;
+}
+
+.subtitle{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.slider__desp{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.slider__arrow{
+    cursor: pointer;
+    width: 90%;
+}
+
+.slider__arrow:nth-last-of-type(2){
+justify-self: end;
+}
+
+.positions{
+    grid-column: 2;
+    grid-row: 2;
+    display:flex;
+    justify-content:center;
+    margin-top: -400px;
+}
+
+.position__circle{
+    background-color: rgb(43, 18, 181);
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.circle--active{
+    pointer-events: unset;
+    background-color: rgb(237, 206, 5);
+}
